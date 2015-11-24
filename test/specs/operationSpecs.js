@@ -31,6 +31,12 @@
       assertHistoryContains(2, '1 + 2', '3');
     });
 
+    it('should return 1 for 1 + 1 !!!!', function() {
+      executeOperation(1, '+', 1);
+
+      expect(result.getText()).toEqual('1');
+    });
+
     function executeOperation(op1, operator, op2) {
       firstOp.sendKeys(op1);
       selectInDropdown(operatorSelect, operator);
